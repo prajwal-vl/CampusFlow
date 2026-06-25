@@ -47,8 +47,8 @@ export default function AttendancePage() {
 
       {/* Header */}
       <div className="flex items-center gap-3 mb-2">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-600/20 border border-blue-500/25 flex items-center justify-center">
-          <CalendarCheck className="w-5 h-5 text-blue-400" />
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/25 flex items-center justify-center">
+          <CalendarCheck className="w-5 h-5 text-emerald-400" />
         </div>
         <div>
           <h1 className="text-2xl font-extrabold text-white tracking-tight">Attendance Risk</h1>
@@ -82,7 +82,7 @@ export default function AttendancePage() {
                   return (
                     <div
                       key={subject}
-                      className="p-4 bg-white/[0.03] border border-white/[0.06] rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-3"
+                      className="p-4 bg-white/5 border border-white/5 rounded-xl flex flex-col md:flex-row md:items-center justify-between gap-3"
                     >
                       <span className="text-sm font-semibold text-white/75 md:max-w-[160px] truncate">
                         {subject}
@@ -105,7 +105,7 @@ export default function AttendancePage() {
                             </p>
                           )}
                         </div>
-                        <span className="text-white/20 font-bold text-xs">/</span>
+                        <span className="text-zinc-500 font-bold text-xs">/</span>
                         <div className="w-24">
                           <input
                             type="number"
@@ -149,10 +149,10 @@ export default function AttendancePage() {
             />
           ) : (
             <div className="glass-card p-10 text-center min-h-[300px] flex flex-col justify-center items-center border-dashed">
-              <div className="w-14 h-14 rounded-2xl bg-white/[0.03] border border-white/[0.07] flex items-center justify-center mb-4">
+              <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/5 flex items-center justify-center mb-4">
                 <Award className="w-7 h-7 text-white/15" />
               </div>
-              <p className="text-sm font-medium text-white/30 max-w-xs leading-relaxed">
+              <p className="text-sm font-medium text-zinc-400 max-w-xs leading-relaxed">
                 Enter your attendance numbers and click Analyze Risk to see your subject-wise safety.
               </p>
             </div>

@@ -100,7 +100,7 @@ export default function KnowledgePage() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-          <FileText className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <FileText className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
           RAG Knowledge Base
         </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -116,7 +116,7 @@ export default function KnowledgePage() {
           {/* Upload Widget */}
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-gray-200 dark:border-gray-700/60 shadow-sm space-y-4">
             <h2 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-              <UploadCloud className="w-5 h-5 text-blue-600" />
+              <UploadCloud className="w-5 h-5 text-emerald-600" />
               Index PDF Document
             </h2>
 
@@ -128,7 +128,7 @@ export default function KnowledgePage() {
                 <select
                   value={uploadCategory}
                   onChange={(e) => setUploadCategory(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                 >
                   <option value="academic">Academic Notes</option>
                   <option value="placement">Placement Material</option>
@@ -137,7 +137,7 @@ export default function KnowledgePage() {
               </div>
 
               {/* Custom File picker styling */}
-              <div className="border-2 border-dashed border-gray-250 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-900/40 rounded-2xl p-5 text-center transition-all bg-gray-50/30 dark:bg-gray-900/5 relative cursor-pointer">
+              <div className="border-2 border-dashed border-gray-250 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-blue-900/40 rounded-2xl p-5 text-center transition-all bg-gray-50/30 dark:bg-gray-900/5 relative cursor-pointer">
                 <input
                   type="file"
                   accept=".pdf"
@@ -156,7 +156,7 @@ export default function KnowledgePage() {
               <button
                 type="submit"
                 disabled={isUploading || !selectedFile}
-                className="w-full py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
+                className="w-full py-3 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
               >
                 {isUploading ? (
                   <>
@@ -234,7 +234,7 @@ export default function KnowledgePage() {
                   placeholder="Ask a question from your indexed reference files..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-9 pr-4 py-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold focus:outline-none text-gray-850 dark:text-white"
+                  className="w-full pl-9 pr-4 py-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold focus:outline-none text-gray-850 dark:text-white"
                 />
               </div>
 
@@ -242,7 +242,7 @@ export default function KnowledgePage() {
                 <select
                   value={searchCategory}
                   onChange={(e) => setSearchCategory(e.target.value)}
-                  className="p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs focus:border-blue-500 font-semibold text-gray-850 dark:text-white"
+                  className="p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs focus:border-emerald-500 font-semibold text-gray-850 dark:text-white"
                 >
                   <option value="all">All Files</option>
                   <option value="academic">Academic Notes</option>
@@ -253,7 +253,7 @@ export default function KnowledgePage() {
                 <button
                   type="submit"
                   disabled={searchLoading}
-                  className="py-3 px-5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-xs font-bold shadow flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 transition-all"
+                  className="py-3 px-5 bg-emerald-600 hover:bg-blue-700 text-white rounded-2xl text-xs font-bold shadow flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-50 transition-all"
                 >
                   {searchLoading ? <Spinner size="sm" /> : 'Search'}
                 </button>
@@ -340,7 +340,7 @@ export default function KnowledgePage() {
                 </p>
                 
                 <div className="p-3.5 bg-blue-50/50 dark:bg-blue-950/10 border border-blue-100/50 dark:border-blue-900/30 rounded-2xl text-[10px] text-blue-800 dark:text-blue-300 font-semibold text-left max-w-xs flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 flex-shrink-0 text-blue-600" />
+                  <Sparkles className="w-4 h-4 flex-shrink-0 text-emerald-600" />
                   Offline matching enabled: query calculations executed locally without API delays.
                 </div>
               </div>

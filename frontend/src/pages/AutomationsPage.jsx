@@ -16,8 +16,8 @@ const TYPE_LABELS = {
 };
 
 const TYPE_COLORS = {
-  deadline_reminder:  'bg-blue-500/15 text-blue-300 border-blue-500/25',
-  notice_broadcast:   'bg-indigo-500/15 text-indigo-300 border-indigo-500/25',
+  deadline_reminder:  'bg-emerald-500/15 text-blue-300 border-emerald-500/25',
+  notice_broadcast:   'bg-teal-400/15 text-indigo-300 border-teal-400/25',
   quiz_ready:         'bg-amber-500/15 text-amber-300 border-amber-500/25',
   study_reminder:     'bg-emerald-500/15 text-emerald-300 border-emerald-500/25',
   attendance_alert:   'bg-rose-500/15 text-rose-300 border-rose-500/25',
@@ -87,8 +87,8 @@ export default function AutomationsPage() {
 
       {/* Header */}
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-600/20 border border-blue-500/25 flex items-center justify-center">
-          <Zap className="w-5 h-5 text-blue-400" />
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/25 flex items-center justify-center">
+          <Zap className="w-5 h-5 text-emerald-400" />
         </div>
         <div>
           <h1 className="text-2xl font-extrabold text-white tracking-tight">Automations</h1>
@@ -116,28 +116,28 @@ export default function AutomationsPage() {
       {loading ? (
         <div className="flex flex-col items-center justify-center py-24 gap-4">
           <Spinner size="lg" />
-          <p className="text-sm text-white/30">Retrieving pipeline logs...</p>
+          <p className="text-sm text-zinc-400">Retrieving pipeline logs...</p>
         </div>
       ) : hasNoLogs ? (
-        <div className="flex flex-col items-center justify-center py-24 px-4 border border-dashed border-white/[0.07] rounded-2xl bg-white/[0.02] text-center">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500/15 to-indigo-600/10 border border-blue-500/20 flex items-center justify-center mb-4">
-            <Zap className="w-7 h-7 text-blue-400/60" />
+        <div className="flex flex-col items-center justify-center py-24 px-4 border border-dashed border-white/5 rounded-2xl bg-white/5 text-center">
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-500/15 to-teal-500/10 border border-emerald-500/20 flex items-center justify-center mb-4">
+            <Zap className="w-7 h-7 text-emerald-400/60" />
           </div>
-          <h3 className="text-base font-bold text-white/50 mb-2">No automation logs yet</h3>
-          <p className="text-sm text-white/30 max-w-sm leading-relaxed">
+          <h3 className="text-base font-bold text-zinc-400 mb-2">No automation logs yet</h3>
+          <p className="text-sm text-zinc-400 max-w-sm leading-relaxed">
             Add a task to trigger your first WhatsApp reminder and Google Calendar event via n8n.
           </p>
         </div>
       ) : filteredLogs.length === 0 ? (
         <div className="py-16 text-center">
-          <p className="text-white/30 font-medium text-sm">No logs match this filter.</p>
+          <p className="text-zinc-400 font-medium text-sm">No logs match this filter.</p>
         </div>
       ) : (
         <div className="glass-card overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="border-b border-white/[0.06] text-[10px] font-bold uppercase tracking-widest text-white/25">
+                <tr className="border-b border-white/5 text-[10px] font-bold uppercase tracking-widest text-white/25">
                   <th className="px-5 py-3.5">Type</th>
                   <th className="px-5 py-3.5">Triggered At</th>
                   <th className="px-5 py-3.5">Status</th>
@@ -150,20 +150,20 @@ export default function AutomationsPage() {
                   return (
                     <tr
                       key={log.id}
-                      className={`border-b border-white/[0.04] hover:bg-white/[0.025] transition-colors ${
+                      className={`border-b border-white/5 hover:bg-white/5 transition-colors ${
                         idx === filteredLogs.length - 1 ? 'border-b-0' : ''
                       }`}
                     >
                       {/* Type */}
                       <td className="px-5 py-3.5 whitespace-nowrap">
-                        <span className={`badge ${TYPE_COLORS[log.type] || 'bg-white/10 text-white/50 border-white/15'}`}>
+                        <span className={`badge ${TYPE_COLORS[log.type] || 'bg-white/10 text-zinc-400 border-white/15'}`}>
                           {TYPE_LABELS[log.type] || log.type}
                         </span>
                       </td>
 
                       {/* Timestamp */}
                       <td className="px-5 py-3.5 whitespace-nowrap">
-                        <div className="flex items-center gap-1.5 text-[11px] font-medium text-white/40">
+                        <div className="flex items-center gap-1.5 text-[11px] font-medium text-zinc-400">
                           <Clock className="w-3 h-3" />
                           {new Date(log.triggered_at).toLocaleString()}
                         </div>

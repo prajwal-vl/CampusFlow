@@ -58,20 +58,20 @@ export default function ChatHubPage() {
       <button
         type="button"
         onClick={() => setSidebarOpen(!sidebarOpen)}
-        className="absolute top-4 left-4 z-40 p-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-500 hover:text-blue-600 block md:hidden"
+        className="absolute top-4 left-4 z-40 p-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-gray-500 hover:text-emerald-600 block md:hidden"
       >
         {sidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
       </button>
 
       {/* 2. Conversations Sidebar */}
-      <div className={`w-[260px] border-r border-gray-200 dark:border-gray-800/80 bg-white dark:bg-gray-850 flex-shrink-0 flex flex-col justify-between absolute md:static top-0 bottom-0 left-0 z-30 transition-transform duration-300 md:translate-x-0 ${
-        sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      <div className={`w-[260px] border-r border-gray-200 dark:border-gray-800/80 bg-white dark:bg-gray-850 flex-shrink-0 flex flex-col justify-between absolute md:static top-0 bottom-0 left-0 z-30 transition-transform duration-300 md:tranzinc-x-0 ${
+        sidebarOpen ? 'tranzinc-x-0' : '-tranzinc-x-full'
       }`}>
         <div className="p-4 flex flex-col gap-4 overflow-hidden h-full">
           <button
             type="button"
             onClick={handleNewChat}
-            className="w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm shadow-blue-500/10 hover:shadow-blue-500/20 transition-all cursor-pointer"
+            className="w-full py-3 px-4 bg-emerald-600 hover:bg-blue-700 text-white rounded-2xl text-xs font-bold flex items-center justify-center gap-2 shadow-sm shadow-emerald-500/10 hover:shadow-emerald-500/20 transition-all cursor-pointer"
           >
             <Plus className="w-4 h-4" /> New Conversation
           </button>
@@ -143,7 +143,7 @@ export default function ChatHubPage() {
           {messages.length === 0 ? (
             /* Empty state */
             <div className="h-full flex flex-col items-center justify-center text-center p-6">
-              <div className="p-4 rounded-full bg-blue-50 dark:bg-blue-900/20 text-blue-500 border border-blue-100 dark:border-blue-900/20 mb-4 animate-bounce">
+              <div className="p-4 rounded-full bg-blue-50 dark:bg-blue-900/20 text-emerald-500 border border-blue-100 dark:border-blue-900/20 mb-4 animate-bounce">
                 <Sparkles className="w-8 h-8" />
               </div>
               <h3 className="text-sm font-bold text-gray-800 dark:text-gray-200 uppercase tracking-wider">

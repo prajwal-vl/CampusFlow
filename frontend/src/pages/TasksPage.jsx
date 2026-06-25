@@ -59,8 +59,8 @@ export default function TasksPage() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <div className="flex items-center gap-3 mb-1">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-600/20 border border-blue-500/25 flex items-center justify-center">
-              <ClipboardCheck className="w-5 h-5 text-blue-400" />
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/25 flex items-center justify-center">
+              <ClipboardCheck className="w-5 h-5 text-emerald-400" />
             </div>
             <h1 className="text-2xl font-extrabold text-white tracking-tight">
               Tasks &amp; Deadlines
@@ -95,8 +95,8 @@ export default function TasksPage() {
               {counts[tab.id] > 0 && (
                 <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-md ${
                   activeFilter === tab.id
-                    ? 'bg-blue-500/25 text-blue-300'
-                    : 'bg-white/[0.06] text-white/30'
+                    ? 'bg-emerald-500/25 text-blue-300'
+                    : 'bg-white/5 text-zinc-400'
                 }`}>
                   {counts[tab.id]}
                 </span>
@@ -110,15 +110,15 @@ export default function TasksPage() {
       {loading && tasks.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-24 gap-4">
           <Spinner size="lg" />
-          <p className="text-sm text-white/30 font-medium">Syncing with Supabase...</p>
+          <p className="text-sm text-zinc-400 font-medium">Syncing with Supabase...</p>
         </div>
       ) : hasNoTasks ? (
         /* Empty state — no tasks at all */
-        <div className="flex flex-col items-center justify-center py-24 px-4 border border-dashed border-white/[0.07] rounded-2xl bg-white/[0.02] text-center">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500/15 to-indigo-600/10 border border-blue-500/20 flex items-center justify-center mb-5 shadow-lg shadow-blue-500/10">
-            <Sparkles className="w-8 h-8 text-blue-400" />
+        <div className="flex flex-col items-center justify-center py-24 px-4 border border-dashed border-white/5 rounded-2xl bg-white/5 text-center">
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/15 to-teal-500/10 border border-emerald-500/20 flex items-center justify-center mb-5 shadow-lg shadow-emerald-500/10">
+            <Sparkles className="w-8 h-8 text-emerald-400" />
           </div>
-          <h3 className="text-base font-bold text-white/70 mb-2">No tasks yet</h3>
+          <h3 className="text-base font-bold text-zinc-300 mb-2">No tasks yet</h3>
           <p className="text-sm text-white/35 max-w-sm leading-relaxed mb-6">
             Add your first deadline to get started. Every task triggers an n8n automation for calendar &amp; WhatsApp.
           </p>
@@ -134,7 +134,7 @@ export default function TasksPage() {
       ) : filteredTasks.length === 0 ? (
         /* Empty filter match */
         <div className="flex flex-col items-center justify-center py-16 text-center">
-          <p className="text-white/30 font-semibold text-sm">
+          <p className="text-zinc-400 font-semibold text-sm">
             No tasks match this filter.
           </p>
         </div>

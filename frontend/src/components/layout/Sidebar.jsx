@@ -49,28 +49,28 @@ export default function Sidebar() {
   return (
     <>
       {/* ── Desktop Sidebar ─────────────────────────────── */}
-      <aside className="sidebar-glass w-64 hidden md:flex flex-col min-h-screen sticky top-0 flex-shrink-0">
+      <aside className="sidebar-glass w-64 hidden md:flex flex-col min-h-screen sticky top-0 flex-shrink-0 z-30">
         
         {/* Logo */}
-        <div className="h-16 flex items-center px-5 border-b border-slate-200 dark:border-slate-800">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center shadow-md">
+        <div className="h-16 flex items-center px-5 border-b border-white/10">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-[10px] bg-gradient-emerald-teal flex items-center justify-center shadow-glow-emerald">
               <span className="text-white font-black text-sm">CF</span>
             </div>
-            <span className="text-slate-800 dark:text-white font-extrabold text-lg tracking-tight">
+            <span className="text-white font-extrabold text-lg tracking-tight">
               CampusFlow
             </span>
           </div>
         </div>
 
         {/* Nav groups */}
-        <nav className="flex-1 py-4 px-3 space-y-6 overflow-y-auto">
+        <nav className="flex-1 py-6 px-3 space-y-8 overflow-y-auto custom-scrollbar">
           {NAV_GROUPS.map((group) => (
             <div key={group.label}>
-              <p className="px-3 mb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600">
+              <p className="px-3 mb-2 text-[10px] font-bold uppercase tracking-widest text-zinc-500">
                 {group.label}
               </p>
-              <div className="space-y-0.5">
+              <div className="space-y-1">
                 {group.links.map((link) => {
                   const Icon = link.icon;
                   return (
@@ -81,7 +81,7 @@ export default function Sidebar() {
                         `sidebar-link ${isActive ? 'active' : ''}`
                       }
                     >
-                      <Icon className="sidebar-icon" />
+                      <Icon className="w-4 h-4 flex-shrink-0" />
                       <span className="flex-1">{link.label}</span>
                       <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-40 transition-opacity" />
                     </NavLink>
@@ -93,20 +93,20 @@ export default function Sidebar() {
         </nav>
 
         {/* User footer */}
-        <div className="p-3 border-t border-slate-200 dark:border-slate-800">
+        <div className="p-4 border-t border-white/10">
           {user && (
-            <div className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200 hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-700/50 transition-all cursor-default">
-              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0 shadow">
+            <div className="flex items-center gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all cursor-default">
+              <div className="w-9 h-9 rounded-[10px] bg-zinc-800 flex items-center justify-center text-white font-bold text-sm flex-shrink-0 shadow-inner border border-white/10">
                 {user.name ? user.name.charAt(0).toUpperCase() : '?'}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">{user.name}</div>
-                <div className="text-[10px] text-slate-500 dark:text-slate-400 truncate">{user.branch} · Year {user.year}</div>
+                <div className="text-xs font-semibold text-zinc-100 truncate">{user.name}</div>
+                <div className="text-[10px] text-zinc-500 truncate">{user.branch} · Year {user.year}</div>
               </div>
             </div>
           )}
-          <div className="mt-2 text-center">
-            <span className="text-[9px] text-slate-400 dark:text-slate-600 font-bold tracking-widest uppercase">
+          <div className="mt-3 text-center">
+            <span className="text-[9px] text-zinc-600 font-bold tracking-widest uppercase">
               CampusAI Hackathon 2025
             </span>
           </div>
@@ -114,7 +114,7 @@ export default function Sidebar() {
       </aside>
 
       {/* ── Mobile Bottom Tab Bar ────────────────────────── */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/95 dark:bg-slate-900/95 border-t border-slate-200 dark:border-slate-800 flex justify-around items-center z-50 px-2 pb-safe">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-zinc-950/90 backdrop-blur-xl border-t border-white/10 flex justify-around items-center z-50 px-2 pb-safe">
         {ALL_MOBILE_LINKS.map((link) => {
           const Icon = link.icon;
           return (
@@ -124,17 +124,17 @@ export default function Sidebar() {
               className={({ isActive }) =>
                 `flex flex-col items-center justify-center flex-1 py-1.5 rounded-xl text-[10px] font-semibold transition-all ${
                   isActive
-                    ? 'text-blue-600 dark:text-blue-400'
-                    : 'text-slate-500 hover:text-slate-800 dark:text-slate-450 dark:hover:text-slate-200'
+                    ? 'text-emerald-400'
+                    : 'text-zinc-500 hover:text-zinc-300'
                 }`
               }
             >
               {({ isActive }) => (
                 <>
-                  <div className={`p-1.5 rounded-lg transition-all ${isActive ? 'bg-blue-500/10' : ''}`}>
-                    <Icon className="w-4 h-4" />
+                  <div className={`p-1.5 rounded-lg transition-all ${isActive ? 'bg-emerald-500/15' : ''}`}>
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <span className="mt-0.5">{link.label}</span>
+                  <span className="mt-1">{link.label}</span>
                 </>
               )}
             </NavLink>

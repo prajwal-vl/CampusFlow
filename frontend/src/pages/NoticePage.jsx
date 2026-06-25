@@ -114,8 +114,8 @@ export default function NoticePage() {
       
       {/* Header */}
       <div className="flex items-center gap-3">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500/20 to-indigo-600/20 border border-blue-500/25 flex items-center justify-center">
-          <Sparkles className="w-5 h-5 text-blue-400" />
+        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500/20 to-teal-500/20 border border-emerald-500/25 flex items-center justify-center">
+          <Sparkles className="w-5 h-5 text-emerald-400" />
         </div>
         <div>
           <h1 className="text-2xl font-extrabold text-white tracking-tight">AI Learning Tools</h1>
@@ -124,14 +124,14 @@ export default function NoticePage() {
       </div>
 
       {/* Tab Switcher */}
-      <div className="flex bg-white/[0.03] p-1 rounded-xl max-w-xl border border-white/[0.07]">
+      <div className="flex bg-white/5 p-1 rounded-xl max-w-xl border border-white/5">
         {[{id:'notice',label:'Notice',Icon:Bell},{id:'flashcards',label:'Flashcards',Icon:Library},{id:'quiz',label:'Quiz Mode',Icon:CheckSquare}].map(({id,label,Icon}) => (
           <button
             key={id}
             onClick={() => setActiveTab(id)}
             className={`flex-1 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
               activeTab === id
-                ? 'bg-gradient-to-r from-blue-500/25 to-indigo-500/20 text-white border border-blue-500/25'
+                ? 'bg-gradient-to-r from-emerald-500/25 to-teal-400/20 text-white border border-emerald-500/25'
                 : 'text-white/35 hover:text-white/55'
             }`}
           >
@@ -310,7 +310,7 @@ export default function NoticePage() {
             ) : (
               <div className="glass-card p-10 min-h-[300px] flex flex-col justify-center items-center text-center border-dashed">
                 <Bell className="w-10 h-10 text-white/15 mb-3" />
-                <p className="text-sm text-white/30 max-w-xs leading-relaxed">
+                <p className="text-sm text-zinc-400 max-w-xs leading-relaxed">
                   Paste a college notice to get an AI summary and broadcast it via WhatsApp.
                 </p>
               </div>
@@ -323,7 +323,7 @@ export default function NoticePage() {
             ) : (
               <div className="glass-card p-10 min-h-[300px] flex flex-col justify-center items-center text-center border-dashed">
                 <Library className="w-10 h-10 text-white/15 mb-3" />
-                <p className="text-sm text-white/30 max-w-xs leading-relaxed">
+                <p className="text-sm text-zinc-400 max-w-xs leading-relaxed">
                   Generate concept cards from lecture slides to study and flip.
                 </p>
               </div>
@@ -344,7 +344,7 @@ export default function NoticePage() {
               ) : (
                 <div className="glass-card p-10 min-h-[300px] flex flex-col justify-center items-center text-center border-dashed">
                   <CheckSquare className="w-10 h-10 text-white/15 mb-3" />
-                  <p className="text-sm text-white/30 max-w-xs leading-relaxed">
+                  <p className="text-sm text-zinc-400 max-w-xs leading-relaxed">
                     Fill out the quiz generator on the left to start an interactive MCQ session.
                   </p>
                 </div>

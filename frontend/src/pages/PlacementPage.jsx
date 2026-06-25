@@ -132,7 +132,7 @@ export default function PlacementPage() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-          <Briefcase className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <Briefcase className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
           Placement Prep Tracker
         </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -146,7 +146,7 @@ export default function PlacementPage() {
           onClick={() => setActiveTab('tracker')}
           className={`flex-1 min-w-[120px] py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
             activeTab === 'tracker'
-              ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-white shadow-sm'
+              ? 'bg-white dark:bg-gray-700 text-emerald-600 dark:text-white shadow-sm'
               : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
           }`}
         >
@@ -158,7 +158,7 @@ export default function PlacementPage() {
           onClick={() => setActiveTab('dsa')}
           className={`flex-1 min-w-[120px] py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
             activeTab === 'dsa'
-              ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-white shadow-sm'
+              ? 'bg-white dark:bg-gray-700 text-emerald-600 dark:text-white shadow-sm'
               : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
           }`}
         >
@@ -170,7 +170,7 @@ export default function PlacementPage() {
           onClick={() => setActiveTab('mock')}
           className={`flex-1 min-w-[120px] py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
             activeTab === 'mock'
-              ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-white shadow-sm'
+              ? 'bg-white dark:bg-gray-700 text-emerald-600 dark:text-white shadow-sm'
               : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
           }`}
         >
@@ -182,7 +182,7 @@ export default function PlacementPage() {
           onClick={() => setActiveTab('resume')}
           className={`flex-1 min-w-[120px] py-2.5 rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition-all ${
             activeTab === 'resume'
-              ? 'bg-white dark:bg-gray-700 text-blue-600 dark:text-white shadow-sm'
+              ? 'bg-white dark:bg-gray-700 text-emerald-600 dark:text-white shadow-sm'
               : 'text-gray-500 dark:text-gray-400 hover:text-gray-900'
           }`}
         >
@@ -206,7 +206,7 @@ export default function PlacementPage() {
               <button
                 type="button"
                 onClick={() => setShowAddForm(!showAddForm)}
-                className="py-2 px-4 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm shadow-blue-500/10 hover:shadow-blue-500/20 transition-all cursor-pointer"
+                className="py-2 px-4 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold flex items-center gap-1.5 shadow-sm shadow-emerald-500/10 hover:shadow-emerald-500/20 transition-all cursor-pointer"
               >
                 <Plus className="w-4 h-4" /> Track Company
               </button>
@@ -231,7 +231,7 @@ export default function PlacementPage() {
                         placeholder="e.g. Google"
                         value={compName}
                         onChange={(e) => setCompName(e.target.value)}
-                        className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                        className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                       />
                     </div>
                     <div className="space-y-1">
@@ -243,7 +243,7 @@ export default function PlacementPage() {
                         placeholder="e.g. Software Engineer Intern"
                         value={compRole}
                         onChange={(e) => setCompRole(e.target.value)}
-                        className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                        className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                       />
                     </div>
                   </div>
@@ -255,7 +255,7 @@ export default function PlacementPage() {
                     <select
                       value={compStatus}
                       onChange={(e) => setCompStatus(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                     >
                       <option value="applied">Applied</option>
                       <option value="oa">Online Assessment (OA)</option>
@@ -274,7 +274,7 @@ export default function PlacementPage() {
                       rows={4}
                       value={compNotes}
                       onChange={(e) => setCompNotes(e.target.value)}
-                      className="w-full p-4 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-blue-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-4 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-emerald-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
                     ></textarea>
                   </div>
 
@@ -288,7 +288,7 @@ export default function PlacementPage() {
                     </button>
                     <button
                       type="submit"
-                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold"
+                      className="px-4 py-2 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold"
                     >
                       Save Track
                     </button>
@@ -345,7 +345,7 @@ export default function PlacementPage() {
                 <select
                   value={dsaTopic}
                   onChange={(e) => setDsaTopic(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                 >
                   <option value="Arrays">Arrays</option>
                   <option value="Strings">Strings</option>
@@ -365,7 +365,7 @@ export default function PlacementPage() {
                 <select
                   value={dsaDiff}
                   onChange={(e) => setDsaDiff(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                 >
                   <option value="easy">Easy</option>
                   <option value="medium">Medium</option>
@@ -377,7 +377,7 @@ export default function PlacementPage() {
                 type="button"
                 onClick={handleGenerateDSA}
                 disabled={aiLoading}
-                className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
+                className="w-full py-3.5 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
               >
                 {aiLoading ? (
                   <>
@@ -429,7 +429,7 @@ export default function PlacementPage() {
                 <select
                   value={mockType}
                   onChange={(e) => setMockType(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                 >
                   <option value="Technical">Technical (DSA, Systems, Languages)</option>
                   <option value="HR / General">HR & Culture Fit</option>
@@ -446,7 +446,7 @@ export default function PlacementPage() {
                   rows={6}
                   value={studentContext}
                   onChange={(e) => setStudentContext(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-blue-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-emerald-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
                 ></textarea>
               </div>
 
@@ -454,7 +454,7 @@ export default function PlacementPage() {
                 type="button"
                 onClick={handleStartInterview}
                 disabled={aiLoading}
-                className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
+                className="w-full py-3.5 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
               >
                 {aiLoading ? (
                   <>
@@ -512,7 +512,7 @@ export default function PlacementPage() {
                     placeholder="e.g. Frontend Engineer"
                     value={targetRole}
                     onChange={(e) => setTargetRole(e.target.value)}
-                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                   />
                 </div>
 
@@ -526,14 +526,14 @@ export default function PlacementPage() {
                     rows={8}
                     value={resumeText}
                     onChange={(e) => setResumeText(e.target.value)}
-                    className="w-full p-3.5 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-blue-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
+                    className="w-full p-3.5 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-emerald-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
                   disabled={aiLoading}
-                  className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
+                  className="w-full py-3.5 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
                 >
                   {aiLoading ? (
                     <>

@@ -136,7 +136,7 @@ export default function StudyGroupsPage() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-          <Users className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <Users className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
           Study Group Scheduler
         </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -153,14 +153,14 @@ export default function StudyGroupsPage() {
           <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-gray-200 dark:border-gray-700/60 shadow-sm space-y-4">
             <div className="flex justify-between items-center">
               <h2 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <Plus className="w-4.5 h-4.5 text-blue-600" />
+                <Plus className="w-4.5 h-4.5 text-emerald-600" />
                 Schedule Session
               </h2>
               {!showCreateForm && (
                 <button
                   type="button"
                   onClick={() => setShowCreateForm(true)}
-                  className="text-xs text-blue-600 dark:text-blue-450 font-black hover:underline"
+                  className="text-xs text-emerald-600 dark:text-blue-450 font-black hover:underline"
                 >
                   Configure
                 </button>
@@ -179,7 +179,7 @@ export default function StudyGroupsPage() {
                     placeholder="e.g. Midterm Preparation"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
-                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                   />
                 </div>
 
@@ -193,7 +193,7 @@ export default function StudyGroupsPage() {
                     placeholder="e.g. Compiler Design"
                     value={subject}
                     onChange={(e) => setSubject(e.target.value)}
-                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                   />
                 </div>
 
@@ -206,7 +206,7 @@ export default function StudyGroupsPage() {
                       type="datetime-local"
                       value={scheduledAt}
                       onChange={(e) => setScheduledAt(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                     />
                   </div>
                   <div className="space-y-1">
@@ -219,7 +219,7 @@ export default function StudyGroupsPage() {
                       max="20"
                       value={maxMembers}
                       onChange={(e) => setMaxMembers(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                     />
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function StudyGroupsPage() {
                             onClick={() => toggleInviteeSelection(classmate.studentId || classmate.id)}
                             className={`text-[9px] font-bold px-2 py-0.5 rounded-lg border transition-all ${
                               isInvited
-                                ? 'bg-blue-600 border-blue-600 text-white shadow-sm'
+                                ? 'bg-emerald-600 border-emerald-600 text-white shadow-sm'
                                 : 'bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 text-gray-500 hover:bg-gray-50 dark:hover:bg-gray-750'
                             }`}
                           >
@@ -262,7 +262,7 @@ export default function StudyGroupsPage() {
                   </button>
                   <button
                     type="submit"
-                    className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold"
+                    className="px-4 py-2 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold"
                   >
                     Save Group
                   </button>

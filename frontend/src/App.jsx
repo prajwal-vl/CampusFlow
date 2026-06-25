@@ -24,13 +24,13 @@ const ProtectedRoute = ({ children }) => {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-50 dark:bg-[#0F172A]">
+      <div className="min-h-screen flex items-center justify-center bg-black">
         <div className="flex flex-col items-center gap-4">
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
-            <span className="text-white font-black text-base">CF</span>
+          <div className="w-12 h-12 rounded-2xl bg-gradient-emerald-teal flex items-center justify-center shadow-glow-emerald">
+            <span className="text-white font-black text-lg">CF</span>
           </div>
           <Spinner size="md" />
-          <p className="text-xs text-slate-400 dark:text-slate-500 font-medium">Loading CampusFlow...</p>
+          <p className="text-xs text-zinc-500 font-medium tracking-wide">INITIALIZING CORE...</p>
         </div>
       </div>
     );
@@ -46,7 +46,7 @@ const ProtectedRoute = ({ children }) => {
 // Layout structure featuring fixed left-sidebar and responsive content body
 const Layout = ({ children }) => {
   return (
-    <div className="flex min-h-screen bg-slate-50 dark:bg-[#0F172A] text-slate-900 dark:text-slate-100">
+    <div className="flex min-h-screen bg-transparent">
       <Sidebar />
       <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
         <Navbar />

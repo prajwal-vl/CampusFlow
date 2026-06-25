@@ -104,7 +104,7 @@ export default function BrainSpacePage() {
       <div className="flex justify-between items-center print:hidden">
         <div>
           <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-            <Rocket className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+            <Rocket className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
             BrainSpace Startup Hub
           </h1>
           <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -124,7 +124,7 @@ export default function BrainSpacePage() {
           <button
             type="button"
             onClick={() => setShowForm(!showForm)}
-            className="py-2.5 px-4 bg-blue-650 hover:bg-blue-700 text-white rounded-2xl text-xs font-bold flex items-center gap-1.5 shadow-sm shadow-blue-500/10 hover:shadow-blue-500/20 transition-all cursor-pointer"
+            className="py-2.5 px-4 bg-blue-650 hover:bg-blue-700 text-white rounded-2xl text-xs font-bold flex items-center gap-1.5 shadow-sm shadow-emerald-500/10 hover:shadow-emerald-500/20 transition-all cursor-pointer"
           >
             <Plus className="w-4 h-4" /> Validate Idea
           </button>
@@ -155,7 +155,7 @@ export default function BrainSpacePage() {
                       placeholder="e.g. PeerGrading Marketplace"
                       value={idea}
                       onChange={(e) => setIdea(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                     />
                   </div>
 
@@ -169,7 +169,7 @@ export default function BrainSpacePage() {
                       rows={3}
                       value={problem}
                       onChange={(e) => setProblem(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-blue-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-emerald-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
                     ></textarea>
                   </div>
 
@@ -183,7 +183,7 @@ export default function BrainSpacePage() {
                       rows={3}
                       value={solution}
                       onChange={(e) => setSolution(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-blue-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-705 bg-gray-50/50 dark:bg-gray-900/30 rounded-2xl text-xs placeholder-gray-400 focus:border-emerald-500 leading-relaxed font-semibold text-gray-800 dark:text-white"
                     ></textarea>
                   </div>
 
@@ -197,7 +197,7 @@ export default function BrainSpacePage() {
                       placeholder="e.g. B.Tech Students & Colleges"
                       value={targetAudience}
                       onChange={(e) => setTargetAudience(e.target.value)}
-                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold text-gray-800 dark:text-white"
+                      className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold text-gray-800 dark:text-white"
                     />
                   </div>
 
@@ -211,7 +211,7 @@ export default function BrainSpacePage() {
                     </button>
                     <button
                       type="submit"
-                      className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold"
+                      className="px-4 py-2 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold"
                     >
                       Audit Idea
                     </button>
@@ -246,7 +246,7 @@ export default function BrainSpacePage() {
                         className="w-full text-left p-3.5 border border-gray-150 dark:border-gray-750 hover:border-blue-150 dark:hover:border-blue-900/30 rounded-2xl flex items-center justify-between gap-3 text-xs bg-gray-50/20 dark:bg-gray-900/5 transition-all group"
                       >
                         <div className="truncate space-y-1">
-                          <p className="truncate font-black text-gray-850 dark:text-gray-300 group-hover:text-blue-600">
+                          <p className="truncate font-black text-gray-850 dark:text-gray-300 group-hover:text-emerald-600">
                             {report.idea}
                           </p>
                           <div className="flex items-center gap-2 text-[9px] text-gray-400 font-bold">
@@ -307,7 +307,7 @@ export default function BrainSpacePage() {
                   {/* Header Title block */}
                   <div className="space-y-1.5">
                     <h2 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white leading-tight">
-                      Startup Concept Audit: <span className="text-blue-600 dark:text-blue-450">"{selectedReport.idea}"</span>
+                      Startup Concept Audit: <span className="text-emerald-600 dark:text-blue-450">"{selectedReport.idea}"</span>
                     </h2>
                     <p className="text-xs text-gray-450 font-bold uppercase tracking-wider">
                       viability scorecard & recommendations
@@ -317,7 +317,7 @@ export default function BrainSpacePage() {
                   {/* Verdict Block */}
                   {analysis.overallVerdict && (
                     <div className="p-5 bg-blue-50/20 dark:bg-blue-950/10 border border-blue-150/40 dark:border-blue-900/30 rounded-3xl space-y-1.5">
-                      <h3 className="text-xs font-black uppercase text-blue-800 dark:text-blue-400 tracking-wider">
+                      <h3 className="text-xs font-black uppercase text-blue-800 dark:text-emerald-400 tracking-wider">
                         VIABILITY VERDICT & FEASIBILITY INDEX
                       </h3>
                       <p className="text-xs text-blue-900 dark:text-blue-300 font-semibold leading-relaxed">
@@ -392,7 +392,7 @@ export default function BrainSpacePage() {
               </p>
               
               <div className="p-3.5 bg-blue-50/50 dark:bg-blue-950/10 border border-blue-100/50 dark:border-blue-900/30 rounded-2xl text-[10px] text-blue-800 dark:text-blue-300 font-semibold text-left max-w-xs flex items-center gap-2">
-                <Sparkles className="w-4 h-4 flex-shrink-0 text-blue-600" />
+                <Sparkles className="w-4 h-4 flex-shrink-0 text-emerald-600" />
                 Audits are persistent: generate a feasibility scorecard, then download it as a print-formatted PDF.
               </div>
             </div>

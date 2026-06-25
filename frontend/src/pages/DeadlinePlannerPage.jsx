@@ -76,7 +76,7 @@ export default function DeadlinePlannerPage() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
-          <Calendar className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+          <Calendar className="w-8 h-8 text-emerald-600 dark:text-emerald-400" />
           Smart Deadline Manager
         </h1>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
@@ -116,7 +116,7 @@ export default function DeadlinePlannerPage() {
                       onClick={() => handleSelectTask(task)}
                       className={`w-full p-3.5 text-left border rounded-2xl text-xs transition-all duration-200 flex items-center justify-between gap-3 ${
                         isSelected
-                          ? 'border-blue-500 bg-blue-50/45 dark:bg-blue-950/20 text-blue-900 dark:text-blue-300 font-bold'
+                          ? 'border-emerald-500 bg-blue-50/45 dark:bg-blue-950/20 text-blue-900 dark:text-blue-300 font-bold'
                           : 'border-gray-150 dark:border-gray-750 hover:bg-gray-50 dark:hover:bg-gray-750/30 text-gray-700 dark:text-gray-400 font-semibold'
                       }`}
                     >
@@ -125,7 +125,7 @@ export default function DeadlinePlannerPage() {
                         <p className="text-[10px] text-gray-400 font-medium mt-0.5">{task.subject}</p>
                       </div>
                       <ChevronRight className={`w-4 h-4 flex-shrink-0 transition-transform ${
-                        isSelected ? 'text-blue-500 translate-x-1' : 'text-gray-400'
+                        isSelected ? 'text-emerald-500 tranzinc-x-1' : 'text-gray-400'
                       }`} />
                     </button>
                   );
@@ -154,7 +154,7 @@ export default function DeadlinePlannerPage() {
                   placeholder="e.g. Compiler Design"
                   value={customSubject}
                   onChange={(e) => setCustomSubject(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-blue-500 font-semibold"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs placeholder-gray-400 focus:border-emerald-500 font-semibold"
                 />
               </div>
 
@@ -167,7 +167,7 @@ export default function DeadlinePlannerPage() {
                   required
                   value={customDeadline}
                   onChange={(e) => setCustomDeadline(e.target.value)}
-                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold"
+                  className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold"
                 />
               </div>
 
@@ -179,7 +179,7 @@ export default function DeadlinePlannerPage() {
                   <select
                     value={difficulty}
                     onChange={(e) => setDifficulty(e.target.value)}
-                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold"
+                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold"
                   >
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
@@ -197,7 +197,7 @@ export default function DeadlinePlannerPage() {
                     required
                     value={estimatedHours}
                     onChange={(e) => setEstimatedHours(e.target.value)}
-                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-blue-500 font-semibold"
+                    className="w-full p-3 border border-gray-250 dark:border-gray-700 bg-gray-50/50 dark:bg-gray-900/30 rounded-xl text-xs focus:border-emerald-500 font-semibold"
                   />
                 </div>
               </div>
@@ -205,7 +205,7 @@ export default function DeadlinePlannerPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
+                className="w-full py-3.5 bg-emerald-600 hover:bg-blue-700 text-white rounded-xl text-xs font-bold shadow flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 transition-all"
               >
                 {loading ? (
                   <>
@@ -245,14 +245,14 @@ export default function DeadlinePlannerPage() {
                 </div>
 
                 <div className="flex items-center gap-3.5 p-4 bg-blue-50/50 dark:bg-blue-950/20 border border-blue-100/50 dark:border-blue-900/30 rounded-2xl">
-                  <div className="p-2.5 rounded-xl bg-blue-500 text-white shadow-sm shadow-blue-500/10">
+                  <div className="p-2.5 rounded-xl bg-emerald-500 text-white shadow-sm shadow-emerald-500/10">
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
                     <h3 className="text-xs font-black text-blue-800 dark:text-blue-350">
                       Google Calendar Synced
                     </h3>
-                    <p className="text-[10px] text-blue-700 dark:text-blue-400 font-semibold">
+                    <p className="text-[10px] text-blue-700 dark:text-emerald-400 font-semibold">
                       Study blocks added via Google Calendar API.
                     </p>
                   </div>
@@ -262,7 +262,7 @@ export default function DeadlinePlannerPage() {
               {/* Recommendation Card */}
               {studyPlan.recommendation && (
                 <div className="bg-white dark:bg-gray-800 p-6 rounded-3xl border border-gray-200 dark:border-gray-700/60 shadow-sm space-y-2">
-                  <h3 className="text-xs font-black uppercase tracking-wider text-blue-600 dark:text-blue-450">
+                  <h3 className="text-xs font-black uppercase tracking-wider text-emerald-600 dark:text-blue-450">
                     AI Study Plan Insights
                   </h3>
                   <p className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed font-semibold">
@@ -294,14 +294,14 @@ export default function DeadlinePlannerPage() {
                     const isRevision = session.type === 'revision';
                     const isPractice = session.type === 'practice';
                     
-                    let badgeColor = 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-900/40';
-                    let dotColor = 'bg-blue-500 shadow-blue-500/25';
+                    let badgeColor = 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 border-emerald-200 dark:border-blue-900/40';
+                    let dotColor = 'bg-emerald-500 shadow-emerald-500/25';
                     if (isRevision) {
                       badgeColor = 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border-amber-200 dark:border-amber-900/40';
                       dotColor = 'bg-amber-500 shadow-amber-500/25';
                     } else if (isPractice) {
                       badgeColor = 'bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 border-indigo-200 dark:border-indigo-900/40';
-                      dotColor = 'bg-indigo-500 shadow-indigo-500/25';
+                      dotColor = 'bg-teal-400 shadow-teal-400/25';
                     }
 
                     return (
@@ -347,7 +347,7 @@ export default function DeadlinePlannerPage() {
               </p>
               
               <div className="flex items-center gap-2 p-3.5 bg-blue-50/50 dark:bg-blue-950/10 border border-blue-100/50 dark:border-blue-900/30 rounded-2xl text-[10px] text-blue-800 dark:text-blue-300 font-semibold text-left max-w-xs">
-                <ShieldAlert className="w-4 h-4 flex-shrink-0 text-blue-600" />
+                <ShieldAlert className="w-4 h-4 flex-shrink-0 text-emerald-600" />
                 This process synchronizes study prompts with WhatsApp reminders and bookable Google Calendar schedules automatically.
               </div>
             </div>
