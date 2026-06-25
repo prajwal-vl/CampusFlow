@@ -12,7 +12,7 @@ export default function Navbar() {
       {/* Mobile Logo */}
       <div className="flex items-center gap-3 md:hidden">
         <div className="w-8 h-8 rounded-[10px] bg-gradient-emerald-teal flex items-center justify-center shadow-glow-emerald">
-          <span className="text-white font-black text-sm">CF</span>
+          <span className="text-white font-black text-sm">🎓</span>
         </div>
         <span className="text-white font-extrabold text-lg tracking-tight">
           CampusFlow

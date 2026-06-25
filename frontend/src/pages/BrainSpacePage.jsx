@@ -5,7 +5,8 @@ import ScoreCard from '../components/brainspace/ScoreCard';
 import Spinner from '../components/ui/Spinner';
 import api from '../api/axios';
 import toast from 'react-hot-toast';
-import { Rocket, Sparkles, Printer, Trash2, ChevronRight, FileText, CheckCircle2, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { Rocket, Sparkles, Printer, Trash2, ChevronRight, FileText, CheckCircle2, AlertTriangle, ArrowLeft, Plus } from 'lucide-react';
+import { format } from 'date-fns';
 
 export default function BrainSpacePage() {
   const [reports, setReports] = useState([]);

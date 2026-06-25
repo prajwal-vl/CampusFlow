@@ -338,7 +338,7 @@ export default function DashboardPage() {
               </div>
               <span>AI Tip of the Day</span>
               <span className="ml-auto">
-                <Sparkles className="w-3.5 h-3.5 text-teal-300" />
+                <Sparkles className="w-3.5 h-3.5" style={{ color: 'light-dark(#0d9488, #5eead4)' }} />
               </span>
             </div>
 
@@ -349,13 +349,13 @@ export default function DashboardPage() {
               </div>
             ) : aiTip ? (
               <div className="relative z-10 p-4 rounded-xl bg-gradient-to-br from-emerald-500/10 to-teal-400/5 border border-emerald-500/15">
-                <p className="text-sm text-emerald-200/80 font-medium leading-relaxed">
+                <p className="text-sm font-medium leading-relaxed" style={{ color: 'light-dark(#065f46, rgba(167, 243, 208, 0.8))' }}>
                   "{aiTip}"
                 </p>
               </div>
             ) : (
               <div className="p-4 rounded-xl bg-amber-500/5 border border-amber-500/15">
-                <p className="text-sm text-amber-300/70 font-medium leading-relaxed flex items-start gap-2">
+                <p className="text-sm font-medium leading-relaxed flex items-start gap-2" style={{ color: 'light-dark(#b45309, rgba(252, 211, 77, 0.7))' }}>
                   <AlertCircle className="w-4 h-4 flex-shrink-0 mt-0.5" />
                   Could not load today's tip. Check your connection.
                 </p>
