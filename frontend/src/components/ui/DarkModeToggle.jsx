@@ -43,12 +43,12 @@ export default function DarkModeToggle() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="p-2 rounded-lg text-white/40 hover:text-white/70 hover:bg-white/[0.06] transition-all border border-transparent hover:border-white/[0.08]"
+      className="p-2 rounded-lg text-slate-500 hover:text-slate-805 hover:bg-slate-100 dark:text-slate-400 dark:hover:text-slate-200 dark:hover:bg-slate-800 transition-all border border-transparent"
       aria-label="Toggle theme"
     >
       {isDark
-        ? <Sun className="w-4 h-4 text-amber-400" />
-        : <Moon className="w-4 h-4 text-indigo-400" />
+        ? <Sun className="w-4 h-4 text-amber-500" />
+        : <Moon className="w-4 h-4 text-indigo-500" />
       }
     </button>
   );

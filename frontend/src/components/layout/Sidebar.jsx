@@ -52,12 +52,12 @@ export default function Sidebar() {
       <aside className="sidebar-glass w-64 hidden md:flex flex-col min-h-screen sticky top-0 flex-shrink-0">
         
         {/* Logo */}
-        <div className="h-16 flex items-center px-5 border-b border-white/[0.06]">
+        <div className="h-16 flex items-center px-5 border-b border-slate-200 dark:border-slate-800">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center shadow-md">
               <span className="text-white font-black text-sm">CF</span>
             </div>
-            <span className="gradient-text font-extrabold text-lg tracking-tight">
+            <span className="text-slate-800 dark:text-white font-extrabold text-lg tracking-tight">
               CampusFlow
             </span>
           </div>
@@ -67,7 +67,7 @@ export default function Sidebar() {
         <nav className="flex-1 py-4 px-3 space-y-6 overflow-y-auto">
           {NAV_GROUPS.map((group) => (
             <div key={group.label}>
-              <p className="px-3 mb-1.5 text-[10px] font-bold uppercase tracking-widest text-white/20">
+              <p className="px-3 mb-1.5 text-[10px] font-bold uppercase tracking-widest text-slate-400 dark:text-slate-600">
                 {group.label}
               </p>
               <div className="space-y-0.5">
@@ -93,20 +93,20 @@ export default function Sidebar() {
         </nav>
 
         {/* User footer */}
-        <div className="p-3 border-t border-white/[0.06]">
+        <div className="p-3 border-t border-slate-200 dark:border-slate-800">
           {user && (
-            <div className="flex items-center gap-3 p-3 rounded-10 bg-white/[0.03] border border-white/[0.05] hover:bg-white/[0.05] transition-all cursor-default">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-violet-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0 shadow shadow-indigo-500/20">
+            <div className="flex items-center gap-3 p-3 rounded-lg bg-slate-50 border border-slate-200 hover:bg-slate-100 dark:bg-slate-800 dark:border-slate-700 dark:hover:bg-slate-700/50 transition-all cursor-default">
+              <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white font-bold text-sm flex-shrink-0 shadow">
                 {user.name ? user.name.charAt(0).toUpperCase() : '?'}
               </div>
               <div className="flex-1 min-w-0">
-                <div className="text-xs font-semibold text-white/80 truncate">{user.name}</div>
-                <div className="text-[10px] text-white/30 truncate">{user.branch} · Year {user.year}</div>
+                <div className="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">{user.name}</div>
+                <div className="text-[10px] text-slate-500 dark:text-slate-400 truncate">{user.branch} · Year {user.year}</div>
               </div>
             </div>
           )}
           <div className="mt-2 text-center">
-            <span className="text-[9px] text-white/15 font-bold tracking-widest uppercase">
+            <span className="text-[9px] text-slate-400 dark:text-slate-600 font-bold tracking-widest uppercase">
               CampusAI Hackathon 2025
             </span>
           </div>
@@ -114,7 +114,7 @@ export default function Sidebar() {
       </aside>
 
       {/* ── Mobile Bottom Tab Bar ────────────────────────── */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-[#0D1117]/95 backdrop-blur-xl border-t border-white/[0.08] flex justify-around items-center z-50 px-2 pb-safe">
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 bg-white/95 dark:bg-slate-900/95 border-t border-slate-200 dark:border-slate-800 flex justify-around items-center z-50 px-2 pb-safe">
         {ALL_MOBILE_LINKS.map((link) => {
           const Icon = link.icon;
           return (
@@ -124,14 +124,14 @@ export default function Sidebar() {
               className={({ isActive }) =>
                 `flex flex-col items-center justify-center flex-1 py-1.5 rounded-xl text-[10px] font-semibold transition-all ${
                   isActive
-                    ? 'text-blue-400'
-                    : 'text-white/30 hover:text-white/50'
+                    ? 'text-blue-600 dark:text-blue-400'
+                    : 'text-slate-500 hover:text-slate-800 dark:text-slate-450 dark:hover:text-slate-200'
                 }`
               }
             >
               {({ isActive }) => (
                 <>
-                  <div className={`p-1.5 rounded-lg transition-all ${isActive ? 'bg-blue-500/15' : ''}`}>
+                  <div className={`p-1.5 rounded-lg transition-all ${isActive ? 'bg-blue-500/10' : ''}`}>
                     <Icon className="w-4 h-4" />
                   </div>
                   <span className="mt-0.5">{link.label}</span>

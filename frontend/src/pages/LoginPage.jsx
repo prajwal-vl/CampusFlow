@@ -70,47 +70,45 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0A0E1A] flex dot-bg">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0F172A] flex">
       
       {/* Left Panel — Branding */}
-      <div className="hidden lg:flex flex-col justify-center px-16 flex-1 relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/5" />
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+      <div className="hidden lg:flex flex-col justify-center px-16 flex-1 relative bg-slate-100 dark:bg-slate-900">
         
         <div className="relative z-10 max-w-md">
           {/* Logo */}
           <div className="flex items-center gap-3 mb-10">
-            <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+            <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center shadow-md">
               <span className="text-white font-black text-xl">CF</span>
             </div>
-            <span className="text-2xl font-extrabold gradient-text">CampusFlow</span>
+            <span className="text-2xl font-extrabold text-slate-800 dark:text-white">CampusFlow</span>
           </div>
 
-          <h1 className="text-4xl font-black text-white leading-tight tracking-tight mb-4">
+          <h1 className="text-4xl font-black text-slate-900 dark:text-white leading-tight tracking-tight mb-4">
             Your academic life,
             <br />
-            <span className="gradient-text">automated.</span>
+            <span className="text-blue-600 dark:text-blue-500">automated.</span>
           </h1>
-          <p className="text-base text-white/45 leading-relaxed mb-10">
+          <p className="text-base text-slate-500 dark:text-slate-400 leading-relaxed mb-10">
             AI-powered student productivity platform for B.Tech students. Track deadlines, get WhatsApp reminders, and never miss a submission.
           </p>
 
           {/* Feature pills */}
           <div className="space-y-3">
             {FEATURES.map(({ icon: Icon, label, desc, color }) => (
-              <div key={label} className="flex items-center gap-4 p-3 rounded-xl bg-white/[0.03] border border-white/[0.06]">
-                <div className="w-9 h-9 rounded-lg bg-white/[0.04] border border-white/[0.08] flex items-center justify-center flex-shrink-0">
+              <div key={label} className="flex items-center gap-4 p-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+                <div className="w-9 h-9 rounded-lg bg-slate-50 dark:bg-slate-700 border border-slate-200 dark:border-slate-600 flex items-center justify-center flex-shrink-0">
                   <Icon className={`w-4 h-4 ${color}`} />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-white/75">{label}</div>
-                  <div className="text-[11px] text-white/30">{desc}</div>
+                  <div className="text-xs font-bold text-slate-800 dark:text-slate-200">{label}</div>
+                  <div className="text-[11px] text-slate-500 dark:text-slate-400">{desc}</div>
                 </div>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 text-[11px] text-white/20 font-medium">
+          <div className="mt-8 text-[11px] text-slate-400 dark:text-slate-500 font-medium">
             🎓 CampusAI Hackathon 2025 · Built for B.Tech Students
           </div>
         </div>
@@ -118,23 +116,23 @@ export default function LoginPage() {
 
       {/* Right Panel — Auth Form */}
       <div className="flex-1 lg:max-w-md flex flex-col justify-center p-6 md:p-10 relative">
-        <div className="absolute inset-0 bg-[#0D1117] lg:border-l lg:border-white/[0.06]" />
+        <div className="absolute inset-0 bg-white dark:bg-[#0F172A] lg:border-l lg:border-slate-200 dark:lg:border-slate-800" />
         
         <div className="relative z-10 w-full max-w-sm mx-auto">
           
           {/* Mobile Logo */}
           <div className="flex items-center gap-2.5 mb-8 lg:hidden">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/25">
+            <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center shadow-md">
               <span className="text-white font-black text-sm">CF</span>
             </div>
-            <span className="text-xl font-extrabold gradient-text">CampusFlow</span>
+            <span className="text-xl font-extrabold text-slate-800 dark:text-white">CampusFlow</span>
           </div>
 
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-white tracking-tight">
+            <h2 className="text-2xl font-bold text-slate-900 dark:text-white tracking-tight">
               {activeTab === 'login' ? 'Welcome back' : 'Create account'}
             </h2>
-            <p className="text-sm text-white/40 mt-1">
+            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
               {activeTab === 'login'
                 ? 'Access your academic productivity dashboard.'
                 : 'Set up WhatsApp and Calendar automations.'}
@@ -142,14 +140,14 @@ export default function LoginPage() {
           </div>
 
           {/* Tab switcher */}
-          <div className="flex bg-white/[0.04] p-1 rounded-xl border border-white/[0.07] mb-6">
+          <div className="flex bg-slate-100 dark:bg-slate-800 p-1 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
             <button
               type="button"
               onClick={() => setActiveTab('login')}
               className={`flex-1 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                 activeTab === 'login'
-                  ? 'bg-gradient-to-r from-blue-500/25 to-indigo-500/20 text-white border border-blue-500/25'
-                  : 'text-white/35 hover:text-white/55'
+                  ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-white border border-slate-200 dark:border-slate-600 shadow-sm'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
               }`}
             >
               <LogIn className="w-3.5 h-3.5" />
@@ -160,8 +158,8 @@ export default function LoginPage() {
               onClick={() => setActiveTab('register')}
               className={`flex-1 py-2 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5 transition-all ${
                 activeTab === 'register'
-                  ? 'bg-gradient-to-r from-blue-500/25 to-indigo-500/20 text-white border border-blue-500/25'
-                  : 'text-white/35 hover:text-white/55'
+                  ? 'bg-white dark:bg-slate-700 text-blue-600 dark:text-white border border-slate-200 dark:border-slate-600 shadow-sm'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
               }`}
             >
               <UserPlus className="w-3.5 h-3.5" />
